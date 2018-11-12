@@ -21,6 +21,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class marsRoverCode {
@@ -37,8 +38,9 @@ public class marsRoverCode {
 		String urlStart = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=";
 		String earthDT ="";
 		String apiKey = "&api_key=ufUgKakiBpPXcHDh4kH2FePMffkgcSloyXrgCnSW";
-				System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+
 		WebDriver driver = null;
+		System.setProperty("webdriver.chrome.driver", current +"/src/Driver/chromedriver");
 		
 		  String st; 
 		 int startPosition = 0;
@@ -95,6 +97,7 @@ public class marsRoverCode {
 			
 		  } // end of file reading while  
 		  br.close();	
+		  System.out.println("Process Completed");
 	}
 	
   // Used to take screenshot of image and saved to drive
